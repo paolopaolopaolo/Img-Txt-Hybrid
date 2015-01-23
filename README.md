@@ -54,11 +54,14 @@
   first]. 
 
   ** IMG.id:
-     Random numerical id that is assigned to the IMG as it is uploaded on the text box.
+    Random numerical id that is assigned to the IMG as it is uploaded on the text box.
+  
   ** IMG.top, IMG.left:
      Position of the image within the text box (in px)
+  
   ** IMG.height, IMG.width:
      Size of the image (in px)
+  
   ** IMG.data: 
      If the image was uploaded from your hard-drive, it will be a base-64 encoded string carrying
      the image data. If copy pasted from another source online, it will be the URL of that image file.
