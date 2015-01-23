@@ -43,4 +43,29 @@
 * Image interactivity (images can be dragged, resized, and deleted)
 * Tab-whitespace enabled (pressing TAB produces extra whitespace)
 
+######FUNCTION LIST:
+* $(<ELEMENT>).imgTxtHybrid() : 
+  Turns element into a image-friendly content-editable text box. 
+
+* $(<ELEMENT>).imgSrc() :
+  Takes any images in the element and returns an array of IMG objects. Each
+  IMG object has the following attributes. [NOTE: if sending results from this
+  function to the backend, pass this function call into a serializer (ie JSON.stringify) 
+  first]. 
+
+  ** IMG.id:
+     Random numerical id that is assigned to the IMG as it is uploaded on the text box.
+  ** IMG.top, IMG.left:
+     Position of the image within the text box (in px)
+  ** IMG.height, IMG.width:
+     Size of the image (in px)
+  ** IMG.data: 
+     If the image was uploaded from your hard-drive, it will be a base-64 encoded string carrying
+     the image data. If copy pasted from another source online, it will be the URL of that image file.
+
+* $(<ELEMENT>).stringConvHTMLtoJS():
+  Converts all the elements in the target ELEMENT into a JS string that can be saved in databases.
+
+* stringConvHTMLtoJS(string):
+  Takes JS strings and converts it into the appropriate HTML [Note: this function is NOT a jQuery function, just a regular JS function].
 
