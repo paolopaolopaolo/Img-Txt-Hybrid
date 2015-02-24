@@ -672,7 +672,7 @@ $.fn.imgTxtHybrid = function (obj_settings) {
     // Else pass any parameter object style settings 
 
     RESIZE_OBJECT_SETTINGS = BASE_SETTINGS;
-
+    
     if (obj_settings.imagecss !== undefined) {
         // Catch errors that happen when uploading your own styling
         try {
@@ -703,7 +703,8 @@ $.fn.imgTxtHybrid = function (obj_settings) {
     // Force this element to be relative and have overflow:auto
     this.css({
         'position': 'relative',
-        'overflow': 'auto'
+        'overflow': 'auto',
+        'white-space': 'pre-wrap',
     });
 
     // Run the encapsulated functions
